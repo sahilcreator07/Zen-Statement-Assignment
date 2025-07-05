@@ -1,0 +1,38 @@
+{
+  "total_resolved": 5,
+  "pattern_frequency": {
+    "Manual Correction": 4,
+    "Payment Verification": 1
+  },
+  "pattern_examples": {
+    "Manual Correction": [
+      {
+        "order_id": 67286592,
+        "summary": "The discrepancy was due to an incorrect payment method, which has been corrected and reconciled."
+      },
+      {
+        "order_id": 88712053,
+        "summary": "The missing order ID was found and the data was updated accordingly."
+      },
+      {
+        "order_id": 62671578,
+        "summary": "The missing order ID was found and the data was updated accordingly."
+      },
+      {
+        "order_id": 92497763,
+        "summary": "The wrong account was initially credited, but the issue was rectified and the transaction was processed correctly."
+      }
+    ],
+    "Payment Verification": [
+      {
+        "order_id": 15780875,
+        "summary": "The customer provided the correct payment reference, resolving the discrepancy."
+      }
+    ]
+  },
+  "top_patterns": [
+    "Manual Correction",
+    "Payment Verification"
+  ],
+  "analysis_summary": "Most common resolution pattern: Manual Correction"
+}
