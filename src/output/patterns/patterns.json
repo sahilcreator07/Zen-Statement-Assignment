@@ -8,7 +8,7 @@
     "Manual Correction": [
       {
         "order_id": 45,
-        "summary": "The discrepancy in Order ID 45 was resolved by correcting an incorrect payment method."
+        "summary": "The discrepancy was caused by an incorrect payment method, which has been corrected."
       },
       {
         "order_id": 300,

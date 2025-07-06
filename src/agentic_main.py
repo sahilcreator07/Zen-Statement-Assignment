@@ -31,9 +31,9 @@ def main():
         logger.info("Please add your Groq API key to the .env file")
         sys.exit(1)
     
-    # Check for input data files
-    input_data_path = "data/recon_data_raw.csv"
-    comments_data_path = "data/recon_data_reply.csv"
+    # Store the dataset in 'data' folder
+    input_data_path = "data/your_dataset_name.csv"  
+    comments_data_path = "data/your_dataset_name.csv"
     
     if not os.path.exists(input_data_path):
         logger.error(f"Input data file not found: {input_data_path}")

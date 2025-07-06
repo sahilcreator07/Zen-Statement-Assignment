@@ -1,0 +1,187 @@
+2025-07-06 15:42:04 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 15:42:04 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 15:42:04 | ERROR    | __main__:main:39 - Input data file not found: test-data/data1.csv
+2025-07-06 15:42:04 | INFO     | __main__:main:40 - Please place your transaction data CSV in the data/ directory
+2025-07-06 15:43:23 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 15:43:23 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 15:43:23 | INFO     | __main__:main:50 - Initializing agent...
+2025-07-06 15:43:23 | INFO     | src.agent:create_agent:132 - Agent initialized with Groq Llama-3.3-70b LLM and tools
+2025-07-06 15:43:23 | INFO     | __main__:main:54 - Starting agent workflow...
+2025-07-06 15:43:23 | INFO     | src.agent:run_agent_workflow:149 - Starting agent workflow
+2025-07-06 15:43:25 | DEBUG    | src.agent:preprocess_wrapper:27 - preprocess_wrapper called with args=('input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv',), kwargs={}
+2025-07-06 15:43:25 | DEBUG    | src.agent:preprocess_wrapper:31 - Parsed kwargs from string: {}
+2025-07-06 15:43:25 | ERROR    | __main__:main:68 - Error during agent execution: input_csv not found in agent input string
+2025-07-06 15:51:10 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 15:51:10 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 15:51:10 | INFO     | __main__:main:50 - Initializing agent...
+2025-07-06 15:51:10 | INFO     | src.agent:create_agent:132 - Agent initialized with Groq Llama-3.3-70b LLM and tools
+2025-07-06 15:51:10 | INFO     | __main__:main:54 - Starting agent workflow...
+2025-07-06 15:51:10 | INFO     | src.agent:run_agent_workflow:149 - Starting agent workflow
+2025-07-06 15:51:11 | DEBUG    | src.agent:preprocess_wrapper:27 - preprocess_wrapper called with args=('input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv',), kwargs={}
+2025-07-06 15:51:11 | DEBUG    | src.agent:preprocess_wrapper:31 - Parsed kwargs from string: {}
+2025-07-06 15:51:11 | ERROR    | __main__:main:68 - Error during agent execution: input_csv not found in agent input string
+2025-07-06 15:52:03 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 15:52:03 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 15:52:03 | INFO     | __main__:main:50 - Initializing agent...
+2025-07-06 15:52:03 | INFO     | src.agent:create_agent:132 - Agent initialized with Groq Llama-3.3-70b LLM and tools
+2025-07-06 15:52:03 | INFO     | __main__:main:54 - Starting agent workflow...
+2025-07-06 15:52:03 | INFO     | src.agent:run_agent_workflow:149 - Starting agent workflow
+2025-07-06 15:52:05 | DEBUG    | src.agent:preprocess_wrapper:27 - preprocess_wrapper called with args=('input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv',), kwargs={}
+2025-07-06 15:52:05 | DEBUG    | src.agent:preprocess_wrapper:31 - Parsed kwargs from string: {}
+2025-07-06 15:52:05 | ERROR    | __main__:main:68 - Error during agent execution: input_csv not found in agent input string
+2025-07-06 15:53:00 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 15:53:00 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 15:53:00 | INFO     | __main__:main:50 - Initializing agent...
+2025-07-06 15:53:00 | INFO     | src.agent:create_agent:144 - Agent initialized with Groq Llama-3.3-70b LLM and tools
+2025-07-06 15:53:00 | INFO     | __main__:main:54 - Starting agent workflow...
+2025-07-06 15:53:00 | INFO     | src.agent:run_agent_workflow:161 - Starting agent workflow
+2025-07-06 15:53:01 | DEBUG    | src.agent:preprocess_wrapper:32 - preprocess_wrapper called with args=('input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv',), kwargs={}
+2025-07-06 15:53:01 | DEBUG    | src.agent:preprocess_wrapper:35 - Processing string input: 'input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv'
+2025-07-06 15:53:01 | DEBUG    | src.agent:parse_kwargs_from_string:23 - Parsing string: 'input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv'
+2025-07-06 15:53:01 | DEBUG    | src.agent:parse_kwargs_from_string:26 - Found matches: []
+2025-07-06 15:53:01 | DEBUG    | src.agent:parse_kwargs_from_string:28 - Parsed kwargs: {}
+2025-07-06 15:53:01 | DEBUG    | src.agent:preprocess_wrapper:38 - Parsed kwargs from string: {}
+2025-07-06 15:53:01 | ERROR    | src.agent:preprocess_wrapper:42 - input_csv not found in parsed kwargs: {}
+2025-07-06 15:53:01 | ERROR    | __main__:main:68 - Error during agent execution: input_csv not found in agent input string
+2025-07-06 15:53:38 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 15:53:38 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 15:53:38 | INFO     | __main__:main:50 - Initializing agent...
+2025-07-06 15:53:38 | INFO     | src.agent:create_agent:156 - Agent initialized with Groq Llama-3.3-70b LLM and tools
+2025-07-06 15:53:38 | INFO     | __main__:main:54 - Starting agent workflow...
+2025-07-06 15:53:38 | INFO     | src.agent:run_agent_workflow:173 - Starting agent workflow
+2025-07-06 15:53:39 | DEBUG    | src.agent:preprocess_wrapper:44 - preprocess_wrapper called with args=('input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv',), kwargs={}
+2025-07-06 15:53:39 | DEBUG    | src.agent:preprocess_wrapper:47 - Processing string input: 'input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv'
+2025-07-06 15:53:39 | DEBUG    | src.agent:parse_kwargs_from_string:23 - Parsing string: 'input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv'
+2025-07-06 15:53:39 | DEBUG    | src.agent:parse_kwargs_from_string:34 - Pattern '(\w+)\s*=\s*["\']([^"\']+)["\']' found matches: []
+2025-07-06 15:53:39 | DEBUG    | src.agent:parse_kwargs_from_string:34 - Pattern '(\w+)\s*=\s*([^\s,]+)' found matches: [('input_csv', '/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv'), ('output_csv', 'output/discrepancies/discrepancies.csv')]
+2025-07-06 15:53:39 | DEBUG    | src.agent:parse_kwargs_from_string:37 - Parsed kwargs: {'input_csv': '/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv', 'output_csv': 'output/discrepancies/discrepancies.csv'}
+2025-07-06 15:53:39 | DEBUG    | src.agent:preprocess_wrapper:50 - Parsed kwargs from string: {'input_csv': '/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv', 'output_csv': 'output/discrepancies/discrepancies.csv'}
+2025-07-06 15:53:39 | DEBUG    | src.agent:preprocess_wrapper:56 - Calling preprocess_transactions with input_csv=/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv=output/discrepancies/discrepancies.csv
+2025-07-06 15:53:39 | INFO     | src.tools:preprocess_transactions:20 - Preprocessing transactions from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv
+2025-07-06 15:53:39 | INFO     | src.tools:preprocess_transactions:26 - Loaded 10 transactions from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv
+2025-07-06 15:53:39 | INFO     | src.tools:preprocess_transactions:42 - Exported 0 discrepancies to output/discrepancies/discrepancies.csv
+2025-07-06 15:53:40 | DEBUG    | src.agent:resolve_wrapper:70 - resolve_wrapper called with args=('comments_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data2.csv',), kwargs={}
+2025-07-06 15:53:40 | INFO     | src.tools:resolve_comments:81 - Starting LLM resolution of comments from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data2.csv
+2025-07-06 15:53:40 | INFO     | src.tools:resolve_comments:93 - Processing 8 comments (sample mode)
+2025-07-06 15:53:41 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 5: Unresolved
+2025-07-06 15:53:41 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 45: Resolved
+2025-07-06 15:53:42 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 40: Unresolved
+2025-07-06 15:53:42 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 13: Unresolved
+2025-07-06 15:53:43 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 300: Resolved
+2025-07-06 15:53:43 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 29: Resolved
+2025-07-06 15:53:43 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 1000: Unresolved
+2025-07-06 15:53:44 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 100: Resolved
+2025-07-06 15:53:44 | INFO     | src.tools:resolve_comments:221 - Resolution complete: 4 resolved, 4 unresolved
+2025-07-06 15:53:44 | INFO     | src.agent:run_agent_workflow:175 - Agent workflow completed
+2025-07-06 15:53:44 | INFO     | __main__:main:57 - Agent workflow completed successfully!
+2025-07-06 15:53:44 | INFO     | __main__:main:58 - Result: 1. The preprocessed transaction data with discrepancies has been saved to output/discrepancies/discrepancies.csv.
+2. The comments from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data2.csv have been processed using LLM, and the resolution status has been determined. The results include:
+   - Resolved count: 4
+   - Unresolved count: 4
+   - Resolved comments have been saved to output/resolved/resolved.csv
+   - Unresolved comments have been saved to output/unresolved/unresolved.csv
+   - Next steps for unresolved comments have been saved to output/unresolved/next_steps.csv
+   - Identified patterns have been saved to output/patterns/patterns.json
+2025-07-06 15:53:44 | INFO     | __main__:main:61 - Output files generated:
+2025-07-06 15:53:44 | INFO     | __main__:main:62 - - output/discrepancies/ (filtered transaction discrepancies)
+2025-07-06 15:53:44 | INFO     | __main__:main:63 - - output/resolved/ (resolved cases)
+2025-07-06 15:53:44 | INFO     | __main__:main:64 - - output/unresolved/ (unresolved cases and next steps)
+2025-07-06 15:53:44 | INFO     | __main__:main:65 - - output/patterns/ (resolution pattern analysis)
+2025-07-06 15:55:25 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 15:55:25 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 15:55:25 | INFO     | __main__:main:50 - Initializing agent...
+2025-07-06 15:55:25 | INFO     | src.agent:create_agent:156 - Agent initialized with Groq Llama-3.3-70b LLM and tools
+2025-07-06 15:55:25 | INFO     | __main__:main:54 - Starting agent workflow...
+2025-07-06 15:55:25 | INFO     | src.agent:run_agent_workflow:173 - Starting agent workflow
+2025-07-06 15:55:26 | DEBUG    | src.agent:preprocess_wrapper:44 - preprocess_wrapper called with args=('input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv',), kwargs={}
+2025-07-06 15:55:26 | DEBUG    | src.agent:preprocess_wrapper:47 - Processing string input: 'input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv'
+2025-07-06 15:55:26 | DEBUG    | src.agent:parse_kwargs_from_string:23 - Parsing string: 'input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv'
+2025-07-06 15:55:26 | DEBUG    | src.agent:parse_kwargs_from_string:34 - Pattern '(\w+)\s*=\s*["\']([^"\']+)["\']' found matches: []
+2025-07-06 15:55:26 | DEBUG    | src.agent:parse_kwargs_from_string:34 - Pattern '(\w+)\s*=\s*([^\s,]+)' found matches: [('input_csv', '/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv'), ('output_csv', 'output/discrepancies/discrepancies.csv')]
+2025-07-06 15:55:26 | DEBUG    | src.agent:parse_kwargs_from_string:37 - Parsed kwargs: {'input_csv': '/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv', 'output_csv': 'output/discrepancies/discrepancies.csv'}
+2025-07-06 15:55:26 | DEBUG    | src.agent:preprocess_wrapper:50 - Parsed kwargs from string: {'input_csv': '/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv', 'output_csv': 'output/discrepancies/discrepancies.csv'}
+2025-07-06 15:55:26 | DEBUG    | src.agent:preprocess_wrapper:56 - Calling preprocess_transactions with input_csv=/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv=output/discrepancies/discrepancies.csv
+2025-07-06 15:55:26 | INFO     | src.tools:preprocess_transactions:20 - Preprocessing transactions from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv
+2025-07-06 15:55:26 | INFO     | src.tools:preprocess_transactions:26 - Loaded 10 transactions from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv
+2025-07-06 15:55:26 | INFO     | src.tools:preprocess_transactions:42 - Exported 0 discrepancies to output/discrepancies/discrepancies.csv
+2025-07-06 15:55:27 | DEBUG    | src.agent:resolve_wrapper:70 - resolve_wrapper called with args=('comments_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data2.csv',), kwargs={}
+2025-07-06 15:55:27 | INFO     | src.tools:resolve_comments:81 - Starting LLM resolution of comments from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data2.csv
+2025-07-06 15:55:27 | INFO     | src.tools:resolve_comments:93 - Processing 8 comments (sample mode)
+2025-07-06 15:55:28 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 5: Unresolved
+2025-07-06 15:55:28 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 45: Resolved
+2025-07-06 15:55:29 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 40: Unresolved
+2025-07-06 15:55:29 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 13: Unresolved
+2025-07-06 15:55:29 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 300: Resolved
+2025-07-06 15:55:30 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 29: Resolved
+2025-07-06 15:55:30 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 1000: Unresolved
+2025-07-06 15:55:30 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 100: Resolved
+2025-07-06 15:55:30 | INFO     | src.tools:resolve_comments:221 - Resolution complete: 4 resolved, 4 unresolved
+2025-07-06 15:55:31 | INFO     | src.agent:run_agent_workflow:175 - Agent workflow completed
+2025-07-06 15:55:31 | INFO     | __main__:main:57 - Agent workflow completed successfully!
+2025-07-06 15:55:31 | INFO     | __main__:main:58 - Result: 1. The preprocessed transaction data with discrepancies has been saved to output/discrepancies/discrepancies.csv.
+2. The comments from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data2.csv have been analyzed using LLM, resulting in:
+   - 4 resolved comments saved to output/resolved/resolved.csv
+   - 4 unresolved comments saved to output/unresolved/unresolved.csv
+   - Next steps for unresolved comments saved to output/unresolved/next_steps.csv
+   - Identified patterns saved to output/patterns/patterns.json
+2025-07-06 15:55:31 | INFO     | __main__:main:61 - Output files generated:
+2025-07-06 15:55:31 | INFO     | __main__:main:62 - - output/discrepancies/ (filtered transaction discrepancies)
+2025-07-06 15:55:31 | INFO     | __main__:main:63 - - output/resolved/ (resolved cases)
+2025-07-06 15:55:31 | INFO     | __main__:main:64 - - output/unresolved/ (unresolved cases and next steps)
+2025-07-06 15:55:31 | INFO     | __main__:main:65 - - output/patterns/ (resolution pattern analysis)
+2025-07-06 15:58:35 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 15:58:35 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 15:58:35 | INFO     | __main__:main:50 - Initializing agent...
+2025-07-06 15:58:35 | INFO     | src.agent:create_agent:156 - Agent initialized with Groq Llama-3.3-70b LLM and tools
+2025-07-06 15:58:35 | INFO     | __main__:main:54 - Starting agent workflow...
+2025-07-06 15:58:35 | INFO     | src.agent:run_agent_workflow:173 - Starting agent workflow
+2025-07-06 15:58:36 | DEBUG    | src.agent:preprocess_wrapper:44 - preprocess_wrapper called with args=('input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv',), kwargs={}
+2025-07-06 15:58:36 | DEBUG    | src.agent:preprocess_wrapper:47 - Processing string input: 'input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv'
+2025-07-06 15:58:36 | DEBUG    | src.agent:parse_kwargs_from_string:23 - Parsing string: 'input_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv = output/discrepancies/discrepancies.csv'
+2025-07-06 15:58:36 | DEBUG    | src.agent:parse_kwargs_from_string:34 - Pattern '(\w+)\s*=\s*["\']([^"\']+)["\']' found matches: []
+2025-07-06 15:58:36 | DEBUG    | src.agent:parse_kwargs_from_string:34 - Pattern '(\w+)\s*=\s*([^\s,]+)' found matches: [('input_csv', '/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv'), ('output_csv', 'output/discrepancies/discrepancies.csv')]
+2025-07-06 15:58:36 | DEBUG    | src.agent:parse_kwargs_from_string:37 - Parsed kwargs: {'input_csv': '/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv', 'output_csv': 'output/discrepancies/discrepancies.csv'}
+2025-07-06 15:58:36 | DEBUG    | src.agent:preprocess_wrapper:50 - Parsed kwargs from string: {'input_csv': '/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv', 'output_csv': 'output/discrepancies/discrepancies.csv'}
+2025-07-06 15:58:36 | DEBUG    | src.agent:preprocess_wrapper:56 - Calling preprocess_transactions with input_csv=/Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv, output_csv=output/discrepancies/discrepancies.csv
+2025-07-06 15:58:36 | INFO     | src.tools:preprocess_transactions:20 - Preprocessing transactions from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv
+2025-07-06 15:58:36 | INFO     | src.tools:preprocess_transactions:26 - Loaded 10 transactions from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data1.csv
+2025-07-06 15:58:36 | INFO     | src.tools:preprocess_transactions:42 - Exported 0 discrepancies to output/discrepancies/discrepancies.csv
+2025-07-06 15:58:37 | DEBUG    | src.agent:resolve_wrapper:70 - resolve_wrapper called with args=('comments_csv = /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data2.csv',), kwargs={}
+2025-07-06 15:58:37 | INFO     | src.tools:resolve_comments:81 - Starting LLM resolution of comments from /Users/sahilgupta/Downloads/ZenStatement_AI_ML_Assignment/test-data/data2.csv
+2025-07-06 15:58:37 | INFO     | src.tools:resolve_comments:93 - Processing 8 comments (sample mode)
+2025-07-06 15:58:38 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 5: Unresolved
+2025-07-06 15:58:38 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 45: Resolved
+2025-07-06 15:58:38 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 40: Unresolved
+2025-07-06 15:58:39 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 13: Unresolved
+2025-07-06 15:58:39 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 300: Resolved
+2025-07-06 15:58:40 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 29: Resolved
+2025-07-06 15:58:40 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 1000: Unresolved
+2025-07-06 15:58:40 | INFO     | src.tools:resolve_comments:174 - Processed Order ID 100: Resolved
+2025-07-06 15:58:40 | INFO     | src.tools:resolve_comments:221 - Resolution complete: 4 resolved, 4 unresolved
+2025-07-06 15:58:41 | INFO     | src.agent:run_agent_workflow:175 - Agent workflow completed
+2025-07-06 15:58:41 | INFO     | __main__:main:57 - Agent workflow completed successfully!
+2025-07-06 15:58:41 | INFO     | __main__:main:58 - Result: 1. The preprocessed transaction data with discrepancies has been saved to output/discrepancies/discrepancies.csv.
+2. The comments have been analyzed using LLM, and the resolution status has been determined. The results include:
+   - Resolved count: 4
+   - Unresolved count: 4
+   - Resolved comments have been saved to output/resolved/resolved.csv
+   - Unresolved comments have been saved to output/unresolved/unresolved.csv
+   - Next steps for unresolved comments have been saved to output/unresolved/next_steps.csv
+   - Identified patterns have been saved to output/patterns/patterns.json
+2025-07-06 15:58:41 | INFO     | __main__:main:61 - Output files generated:
+2025-07-06 15:58:41 | INFO     | __main__:main:62 - - output/discrepancies/ (filtered transaction discrepancies)
+2025-07-06 15:58:41 | INFO     | __main__:main:63 - - output/resolved/ (resolved cases)
+2025-07-06 15:58:41 | INFO     | __main__:main:64 - - output/unresolved/ (unresolved cases and next steps)
+2025-07-06 15:58:41 | INFO     | __main__:main:65 - - output/patterns/ (resolution pattern analysis)
+2025-07-06 16:00:54 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 16:00:54 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 16:00:54 | ERROR    | __main__:main:39 - Input data file not found: data/recon_data_raw.csv
+2025-07-06 16:00:54 | INFO     | __main__:main:40 - Please place your transaction data CSV in the data/ directory
+2025-07-06 16:01:18 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 16:01:18 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 16:01:18 | ERROR    | __main__:main:39 - Input data file not found: data/recon_data_raw.csv
+2025-07-06 16:01:18 | INFO     | __main__:main:40 - Please place your transaction data CSV in the data/ directory
+2025-07-06 16:02:54 | INFO     | src.utils:setup_logging:35 - Logging initialized.
+2025-07-06 16:02:54 | INFO     | __main__:main:23 - Starting ZenStatement Agentic Reconciliation Framework...
+2025-07-06 16:02:54 | ERROR    | __main__:main:39 - Input data file not found: data/recon_data_raw.csv
+2025-07-06 16:02:54 | INFO     | __main__:main:40 - Please place your transaction data CSV in the data/ directory

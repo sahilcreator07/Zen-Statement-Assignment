@@ -1,0 +1,5 @@
+order_id,next_steps,summary
+5,"Double-check payment details, verify transaction records, and potentially contact the customer or payment processor for clarification.","The payment amount recorded does not match the expected payment, indicating a discrepancy that needs to be investigated."
+40,"Double-check payment details, verify transaction records, and investigate possible causes such as incorrect payment processing or data entry errors.","The payment amount recorded does not match the expected payment, indicating a potential discrepancy."
+13,"Investigate payment records, verify transaction details, and check for any system or reporting errors","Payment not found in financial report, requiring further investigation"
+1000,Wait for the payment to finalize before attempting reconciliation again.,"The payment status for Order ID 1000 is still processing and has not finalized, preventing reconciliation."

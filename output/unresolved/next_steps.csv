@@ -1,4 +1,5 @@
 order_id,next_steps,summary
-44516715,Contact customer for payment confirmation and check payment gateway logs,Payment not found in financial report - requires investigation
-34286015,Check payment gateway status and request confirmation from provider,Payment gateway confirmation issue
-90851690,Request complete transaction details from customer,Partial payment found but full details missing
+5,"Double-check payment details, verify transaction records, and potentially contact the customer or payment processor for clarification.","The payment amount recorded does not match the expected payment, indicating a discrepancy that needs to be investigated."
+40,"Double-check the payment details, verify the transaction records, and potentially contact the customer or payment processor for clarification.","The payment amount recorded does not match the expected payment, indicating a discrepancy that needs to be investigated."
+13,"Conduct an additional investigation to locate the payment in the financial records, verify the payment method and date, and check for any system or reporting errors that may have caused the discrepancy.","The payment for Order ID 13 was not found in the corresponding financial report, indicating a discrepancy that requires further investigation."
+1000,Wait for the payment to finalize before attempting reconciliation again.,"The payment status for Order ID 1000 is still processing and has not finalized, preventing reconciliation."

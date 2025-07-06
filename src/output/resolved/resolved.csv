@@ -1,5 +1,5 @@
 is_resolved,resolution_summary,next_steps,resolution_pattern,confidence,order_id,original_comment
-True,The discrepancy in Order ID 45 was resolved by correcting an incorrect payment method.,"None, as the issue is fully resolved and reconciled.",Manual Correction,1.0,45,The discrepancy was due to an incorrect payment method. It�s now corrected and reconciled.
+True,"The discrepancy was caused by an incorrect payment method, which has been corrected.","None, as the issue is fully resolved.",Manual Correction,1.0,45,The discrepancy was due to an incorrect payment method. It�s now corrected and reconciled.
 True,The discrepancy in Order ID 300 was resolved by correcting an incorrect payment method.,No further action required as the issue is fully reconciled.,Manual Correction,1.0,300,The discrepancy was due to an incorrect payment method. It�s now corrected and reconciled.
 True,"The financial reconciliation issue for Order ID 29 has been resolved, with all records now aligning across platforms.","None, as the issue is fully resolved.",System Sync Issue,1.0,29,The reconciliation has been completed. The records now align across all platforms.
 True,"Incorrect data formatting caused the error, which has been corrected.","None, as the issue is resolved.",Manual Correction,1.0,100,"The error was caused by incorrect data formatting, which has now been corrected."

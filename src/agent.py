@@ -20,20 +20,44 @@ import re
 def parse_kwargs_from_string(s):
     """Parse a string like 'input_csv = "foo.csv", output_csv = "bar.csv"' into kwargs dict."""
     s = s.strip()
-    matches = re.findall(r'(\w+)\s*=\s*[\'"]([^\'"]+)[\'"]', s)
-    return {k: v for k, v in matches}
+    logger.debug(f"Parsing string: '{s}'")
+    
+    # Try multiple regex patterns to handle different formats
+    patterns = [
+        r'(\w+)\s*=\s*["\']([^"\']+)["\']',  # Standard quoted format
+        r'(\w+)\s*=\s*([^\s,]+)',  # No quotes format
+        r'(\w+)\s*=\s*([^,]+)',  # More flexible
+    ]
+    
+    for pattern in patterns:
+        matches = re.findall(pattern, s)
+        logger.debug(f"Pattern '{pattern}' found matches: {matches}")
+        if matches:
+            result = {k: v for k, v in matches}
+            logger.debug(f"Parsed kwargs: {result}")
+            return result
+    
+    logger.error(f"No matches found with any pattern for string: '{s}'")
+    return {}
 
 def preprocess_wrapper(*args, **kwargs):
     logger.debug(f"preprocess_wrapper called with args={args}, kwargs={kwargs}")
     # Handle stringified input from agent
-    if args and isinstance(args[0], str) and 'input_csv' in args[0]:
-        kw = parse_kwargs_from_string(args[0])
-        logger.debug(f"Parsed kwargs from string: {kw}")
-        input_csv = kw.get('input_csv')
-        output_csv = kw.get('output_csv', 'output/discrepancies/discrepancies.csv')
-        if not input_csv:
-            raise ValueError('input_csv not found in agent input string')
-        return (input_csv, output_csv)
+    if args and isinstance(args[0], str):
+        logger.debug(f"Processing string input: '{args[0]}'")
+        if 'input_csv' in args[0]:
+            kw = parse_kwargs_from_string(args[0])
+            logger.debug(f"Parsed kwargs from string: {kw}")
+            input_csv = kw.get('input_csv')
+            output_csv = kw.get('output_csv', 'output/discrepancies/discrepancies.csv')
+            if not input_csv:
+                logger.error(f"input_csv not found in parsed kwargs: {kw}")
+                raise ValueError('input_csv not found in agent input string')
+            logger.debug(f"Calling preprocess_transactions with input_csv={input_csv}, output_csv={output_csv}")
+            return preprocess_transactions(input_csv, output_csv)
+        else:
+            logger.debug("No 'input_csv' found in string, treating as file path")
+            return preprocess_transactions(args[0], 'output/discrepancies/discrepancies.csv')
     # Handle normal positional/keyword args
     input_csv = args[0] if args else kwargs.get('input_csv')
     output_csv = args[1] if len(args) > 1 else kwargs.get('output_csv', 'output/discrepancies/discrepancies.csv')
