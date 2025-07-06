@@ -15,6 +15,8 @@ This project implements an **autonomous AI agent** that processes financial reco
 - **📊 Categorize** cases as resolved/unresolved
 - **📈 Identify** resolution patterns and trends
 - **📋 Generate** actionable next steps
+  
+<img width="851" alt="Screenshot 2025-07-06 at 3 04 25 PM" src="https://github.com/user-attachments/assets/5b639af6-adfe-4556-b01d-93d29fc0aee6" />
 
 ## ✨ Key Features
 
