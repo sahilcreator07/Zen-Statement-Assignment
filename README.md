@@ -8,6 +8,9 @@ An intelligent, agentic framework for automated financial transaction reconcilia
 
 ## 🎯 Overview
 
+<img width="656" alt="Screenshot 2025-07-06 at 8 35 45 PM" src="https://github.com/user-attachments/assets/22d87339-94e4-4bf2-ac52-bd5a10ee0129" />
+
+
 This project implements an **autonomous AI agent** that processes financial reconciliation data through intelligent analysis and categorization. The system can:
 
 - **🔍 Preprocess** large transaction datasets
@@ -16,7 +19,6 @@ This project implements an **autonomous AI agent** that processes financial reco
 - **📈 Identify** resolution patterns and trends
 - **📋 Generate** actionable next steps
 
-<img width="807" alt="Screenshot 2025-07-06 at 3 25 29 PM" src="https://github.com/user-attachments/assets/cc037b32-2454-4cb2-a62c-b8011715b0af" />
 
 ## ✨ Key Features
 
