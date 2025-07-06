@@ -50,6 +50,9 @@ This project implements an **autonomous AI agent** that processes financial reco
 │   reply.csv     │    │ • ReAct Pattern │    │ • next_steps.csv│
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
+<img width="660" alt="Screenshot 2025-07-06 at 8 33 33 PM" src="https://github.com/user-attachments/assets/738c18d6-6b9e-41e4-be04-fd3736eab489" />
+
+
 
 ## 🚀 Quick Start
 
