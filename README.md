@@ -72,11 +72,11 @@ pip install -r requirements.txt
 
 ### 3. Configure Environment
 ```bash
-# Copy environment template
-cp .env.example .env
+# Create a .env file 
 
-# Add your Groq API key
-echo "GROQ_API_KEY=your_api_key_here" >> .env
+# Add
+GROQ_API_KEY=your_api_key_here
+UPLOAD_TARGET=local
 ```
 
 ### 4. Prepare Data
