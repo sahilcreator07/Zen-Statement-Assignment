@@ -87,6 +87,8 @@ data/
 
 ### 5. Run the System
 ```bash
+input_data_path = "data/your_dataset_name.csv" -> dataset with col racon_data_raw.csv
+comments_data_path = "data/your_dataset_name.csv" -> dataset with col racon_data_reply
 python src/agentic_main.py
 ```
 
