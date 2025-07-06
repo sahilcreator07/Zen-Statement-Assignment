@@ -11,6 +11,12 @@ from loguru import logger
 from src.tools import preprocess_transactions, upload_file, resolve_comments
 import re
 
+
+
+# Before Wrapper, AI agents use human-like format:
+# "input_csv = 'data/file.csv', output_csv = 'output/result.csv'" 
+# therefore, it do not send as a python object.
+
 def parse_kwargs_from_string(s):
     """Parse a string like 'input_csv = "foo.csv", output_csv = "bar.csv"' into kwargs dict."""
     s = s.strip()

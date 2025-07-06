@@ -1,6 +1,4 @@
 order_id,next_steps,summary
-44516715,"Conduct a thorough review of financial records and payment processing systems to locate the missing payment or identify the cause of the discrepancy. This may involve checking for system errors, verifying payment method details, or contacting the customer for additional information.","The payment for Order ID 44516715 was not found in the corresponding financial report, indicating a discrepancy that requires further investigation."
-34286015,"Investigate the payment gateway issue, potentially retry the payment confirmation or contact the payment gateway support for assistance.","The payment gateway failed to return the correct confirmation, leaving the order unresolved."
-90851690,Investigate and retrieve the full transaction details to complete the reconciliation process.,"A partial payment was found, but full transaction details are still missing."
-35877233,Update the missing fields and reprocess the transaction for reconciliation.,The transaction is pending due to missing fields and requires updating for reconciliation.
-50407375,Reprocess the payment to resolve the issue.,"A system error occurred during payment processing, requiring reprocessing."
+44516715,Contact customer for payment confirmation and check payment gateway logs,Payment not found in financial report - requires investigation
+34286015,Check payment gateway status and request confirmation from provider,Payment gateway confirmation issue
+90851690,Request complete transaction details from customer,Partial payment found but full details missing

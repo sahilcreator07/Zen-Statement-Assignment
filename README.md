@@ -1,111 +1,349 @@
-# ZenStatement Agentic Reconciliation Framework
+# 🤖 ZenStatement AI-Powered Financial Reconciliation
 
-## Overview
-This project implements an autonomous, agentic framework for financial transaction reconciliation, designed for ZenStatement. It leverages LLM-driven dynamic planning and tool orchestration to process, resolve, and act on financial discrepancies.
+An intelligent, agentic framework for automated financial transaction reconciliation using AI/ML. This system leverages Groq's Llama-3.3-70b LLM to analyze, categorize, and resolve financial discrepancies with minimal human intervention.
 
----
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Groq](https://img.shields.io/badge/Groq-Llama--3.3--70b-orange.svg)](https://console.groq.com/)
 
-## Features
-- **Dynamic Agent:** Uses LangChain ReAct Agent with Groq Llama-3.3-70b LLM for step-by-step planning and tool selection.
-- **Data Preprocessing:** Cleans and filters transaction data from CSVs.
-- **Automated Actions:** Uploads files to local output directories.
-- **LLM Resolution:** Uses Groq Llama-3.3-70b to reason over free-text comments and suggest next steps.
-- **Audit Logging:** Logs all agent thoughts, actions, and decisions for traceability.
-- **Modular Tools:** All actions (preprocess, upload, resolve) are modular and agent-invokable.
-- **Containerized:** Ready to run locally or in Docker.
+## 🎯 Overview
 
----
+This project implements an **autonomous AI agent** that processes financial reconciliation data through intelligent analysis and categorization. The system can:
 
-## Project Structure
+- **🔍 Preprocess** large transaction datasets
+- **🤖 Analyze** free-text comments using AI
+- **📊 Categorize** cases as resolved/unresolved
+- **📈 Identify** resolution patterns and trends
+- **📋 Generate** actionable next steps
+
+## ✨ Key Features
+
+### 🧠 **Intelligent Agent System**
+- **LangChain ReAct Agent** with dynamic planning
+- **Groq Llama-3.3-70b** for advanced reasoning
+- **Autonomous workflow** execution
+- **Audit trail** for all decisions
+
+### 📊 **Data Processing**
+- **CSV preprocessing** with intelligent filtering
+- **Discrepancy detection** (recon_status = 'Not Found')
+- **Pattern recognition** in resolution types
+- **Structured output** generation
+
+### 🛠️ **Modular Architecture**
+- **Wrapper functions** for AI agent communication
+- **Tool-based design** for extensibility
+- **Error handling** with graceful fallbacks
+- **Containerized deployment** ready
+
+## 🏗️ Architecture
+
 ```
-ZenStatement_AI_ML_Assignment/
-  ├── src/
-  │   ├── tools.py           # Tool definitions
-  │   ├── agent.py           # Agent orchestration
-  │   ├── agentic_main.py    # Entry point
-  │   ├── utils.py           # Utilities (logging, config)
-  ├── data/                  # Example input data
-  ├── output/                # Generated outputs
-  ├── requirements.txt
-  ├── Dockerfile
-  ├── .env                   # Secrets/config
-  └── README.md
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Input Data    │    │   AI Agent      │    │   Output Files  │
+│                 │    │                 │    │                 │
+│ • recon_data_   │───▶│ • LangChain     │───▶│ • resolved.csv  │
+│   raw.csv       │    │ • Groq LLM      │    │ • unresolved.csv│
+│ • recon_data_   │    │ • Tool Wrappers │    │ • patterns.json │
+│   reply.csv     │    │ • ReAct Pattern │    │ • next_steps.csv│
+└─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
----
+## 🚀 Quick Start
 
-## Setup
-1. **Clone the repo:**
-   ```bash
-   git clone <repo-url>
-   cd ZenStatement_AI_ML_Assignment
-   ```
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Configure environment:**
-   - Copy `.env.example` to `.env` and add your Groq API key
-   - Place your CSV files in the `data/` directory:
-     - `data/recon_data_raw.csv` (transaction data)
-     - `data/recon_data_reply.csv` (comments data)
+### Prerequisites
+- Python 3.8+
+- Groq API key ([Get one here](https://console.groq.com/))
 
----
+### 1. Clone & Setup
+```bash
+git clone <your-repo-url>
+cd ZenStatement_AI_ML_Assignment
+```
 
-## Usage
-Run the agent end-to-end:
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configure Environment
+```bash
+# Copy environment template
+cp .env.example .env
+
+# Add your Groq API key
+echo "GROQ_API_KEY=your_api_key_here" >> .env
+```
+
+### 4. Prepare Data
+Place your CSV files in the `data/` directory:
+```bash
+data/
+├── recon_data_raw.csv      # Transaction data
+└── recon_data_reply.csv    # Comments/responses
+```
+
+### 5. Run the System
 ```bash
 python src/agentic_main.py
 ```
 
-- Input CSVs should be placed in the `data/` directory.
-- Outputs will be saved in the `output/` directory with the following structure:
-  - `output/discrepancies/` - Filtered transaction discrepancies
-  - `output/resolved/` - Resolved cases
-  - `output/unresolved/` - Unresolved cases and next steps
-  - `output/patterns/` - Resolution pattern analysis
+## 📁 Project Structure
 
----
-
-## Testing
-- Use the provided sample CSVs in `data/` or your own.
-- Check `output/` for generated files.
-- Review logs for agent reasoning and actions.
-
----
-
-## Deployment (Docker)
-Build and run in Docker:
-```bash
-docker build -t zenstatement-agent .
-docker run --env-file .env -v $(pwd)/data:/app/data -v $(pwd)/output:/app/output zenstatement-agent
+```
+ZenStatement_AI_ML_Assignment/
+├── 📂 src/
+│   ├── 🐍 agentic_main.py    # Entry point
+│   ├── 🤖 agent.py           # AI agent orchestration
+│   ├── 🛠️ tools.py           # Core functions
+│   └── 🔧 utils.py           # Utilities
+├── 📂 data/                  # Input data
+│   ├── recon_data_raw.csv    # Transaction data
+│   └── recon_data_reply.csv  # Comments data
+├── 📂 output/                # Generated results
+│   ├── discrepancies/        # Filtered discrepancies
+│   ├── resolved/            # Resolved cases
+│   ├── unresolved/          # Unresolved cases
+│   └── patterns/            # Pattern analysis
+├── 📄 requirements.txt       # Dependencies
+├── 🐳 Dockerfile            # Container setup
+├── 📄 .env                  # Configuration
+└── 📖 README.md            # This file
 ```
 
+## 🔧 Configuration
+
+### Environment Variables (.env)
+```bash
+# Required
+GROQ_API_KEY=your_groq_api_key_here
+
+# Optional
+UPLOAD_TARGET=local
+LOG_LEVEL=INFO
+```
+
+### Input Data Format
+
+#### Transaction Data (`recon_data_raw.csv`)
+```csv
+txn_ref_id,sys_a_date,sys_a_amount_attribute_1,recon_status,...
+44516715,02/04/24,20.000000,Not Found,...
+34286015,07/07/24,116.699997,Not Found,...
+```
+
+#### Comments Data (`recon_data_reply.csv`)
+```csv
+Transaction ID,amount,Comments
+44516715,20,The payment was not found in the corresponding financial report...
+34286015,116.6999969,The payment gateway didn't return the correct confirmation...
+```
+
+## 📊 Output Structure
+
+After running, you'll find organized results in `output/`:
+
+### 📁 `output/discrepancies/`
+- **discrepancies.csv**: Filtered transaction discrepancies
+
+### 📁 `output/resolved/`
+- **resolved.csv**: Cases marked as resolved by AI
+
+### 📁 `output/unresolved/`
+- **unresolved.csv**: Cases needing attention
+- **next_steps.csv**: Action items for unresolved cases
+
+### 📁 `output/patterns/`
+- **patterns.json**: Analysis of resolution patterns
+
+## 🧪 Testing & Examples
+
+### Dry Run (No API Calls)
+```bash
+python dry_run_tools.py
+```
+
+### Sample Data
+The project includes sample data files for testing:
+- `data/recon_data_raw.csv` (3000+ transactions)
+- `data/recon_data_reply.csv` (1000+ comments)
+
+### Expected Output
+```bash
+✅ Preprocessing: 1000 discrepancies found
+✅ Resolution: 2 resolved, 3 unresolved
+📁 Output files created in output/ directory
+```
+
+## 🐳 Docker Deployment
+
+### Build Image
+```bash
+docker build -t zenstatement-agent .
+```
+
+### Run Container
+```bash
+docker run \
+  --env-file .env \
+  -v $(pwd)/data:/app/data \
+  -v $(pwd)/output:/app/output \
+  zenstatement-agent
+```
+
+## 🔍 How It Works
+
+### 1. **Data Preprocessing**
+```python
+# Filters transactions with recon_status = 'Not Found'
+preprocess_transactions("data/recon_data_raw.csv", "output/discrepancies.csv")
+```
+
+### 2. **AI Analysis**
+```python
+# AI analyzes each comment and determines resolution status
+resolve_comments("data/recon_data_reply.csv")
+```
+
+### 3. **Intelligent Categorization**
+```python
+# AI response example:
+{
+  "is_resolved": true,
+  "resolution_summary": "Customer provided payment proof",
+  "next_steps": "None - resolved",
+  "resolution_pattern": "Payment Verification",
+  "confidence": 0.95
+}
+```
+
+### 4. **Pattern Recognition**
+- Identifies common resolution types
+- Analyzes trends in resolution patterns
+- Generates insights for process improvement
+
+## 🛠️ Development
+
+### Adding New Tools
+```python
+# In src/tools.py
+def new_tool_function(input_param):
+    # Your tool logic here
+    return result
+
+# In src/agent.py
+def new_tool_wrapper(*args, **kwargs):
+    # Parse AI agent input
+    # Call your tool
+    return new_tool_function(parsed_input)
+
+# Register in get_tools()
+Tool(
+    name="new_tool",
+    func=new_tool_wrapper,
+    description="Description for AI agent"
+)
+```
+
+### Customizing AI Prompts
+```python
+# In src/tools.py - resolve_comments function
+prompt = f"""
+Analyze this financial reconciliation comment:
+Order ID: {order_id}
+Comment: {comment}
+
+Please respond in JSON format with:
+- is_resolved: true/false
+- resolution_summary: "Brief summary"
+- next_steps: "What to do next"
+- resolution_pattern: "Category"
+- confidence: 0.0-1.0
+"""
+```
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+#### 1. **Missing API Key**
+```bash
+Error: GROQ_API_KEY not found in environment variables
+Solution: Add your Groq API key to .env file
+```
+
+#### 2. **Missing Data Files**
+```bash
+Error: Input data file not found: data/recon_data_raw.csv
+Solution: Place your CSV files in the data/ directory
+```
+
+#### 3. **Import Errors**
+```bash
+Error: ModuleNotFoundError: No module named 'src'
+Solution: Run from project root directory
+```
+
+### Debug Mode
+```bash
+# Enable verbose logging
+export LOG_LEVEL=DEBUG
+python src/agentic_main.py
+```
+
+## 📈 Performance
+
+### Processing Capacity
+- **Transaction Data**: 3000+ rows
+- **Comments Analysis**: 1000+ entries
+- **Processing Time**: ~2-3 minutes for full dataset
+- **AI API Calls**: Limited to 10 rows for testing (configurable)
+
+### Optimization Tips
+- Use smaller datasets for testing
+- Adjust `max_iterations` in agent configuration
+- Monitor API usage with Groq console
+
+## 🤝 Contributing
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+### Development Setup
+```bash
+# Install development dependencies
+pip install -r requirements.txt
+pip install pytest black flake8
+
+# Run tests
+pytest
+
+# Format code
+black src/
+
+# Lint code
+flake8 src/
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- **Groq** for providing the Llama-3.3-70b API
+- **LangChain** for the agent framework
+- **ZenStatement** for the reconciliation use case
+
+## 📞 Support
+
+- **Issues**: [GitHub Issues](https://github.com/your-repo/issues)
+- **Documentation**: [Wiki](https://github.com/your-repo/wiki)
+- **Email**: your-email@example.com
+
 ---
 
-## Configuration (.env)
-- `GROQ_API_KEY`: Your Groq API key (get from https://console.groq.com/)
-- `UPLOAD_TARGET`: `local` (default)
-
----
-
-## Groq API Setup
-1. Sign up at https://console.groq.com/
-2. Get your API key from the console
-3. Add it to your `.env` file:
-   ```
-   GROQ_API_KEY=your_groq_api_key_here
-   ```
-
----
-
-## Notes
-- All agent actions and thoughts are logged for auditability.
-- The agent dynamically plans its workflow and handles failures/retries.
-- Modular tools can be extended or swapped as needed.
-- Uses Groq's Llama-3.3-70b-versatile model for fast, cost-effective LLM processing.
-
----
-
-## License
-MIT
+**Made with ❤️ for intelligent financial reconciliation**

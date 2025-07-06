@@ -156,11 +156,11 @@ def resolve_comments(comments_csv: str) -> Dict[str, Any]:
                 result["original_comment"] = comment
                 
                 # Categorize based on resolution status
-                if result.get("is_resolved", False):
+                if result.get("is_resolved", False): # False to safely handle cases where the "is_resolved" key might not exist
                     resolved_cases.append(result)
                     resolution_patterns.append({
                         "order_id": order_id,
-                        "pattern": result.get("resolution_pattern", "Unknown"),
+                        "pattern": result.get("resolution_pattern", "Unknown"), # if resolution_pattern is not present, use "Unknown"
                         "summary": result.get("resolution_summary", "")
                     })
                 else:
