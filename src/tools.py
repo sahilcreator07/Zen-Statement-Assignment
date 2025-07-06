@@ -218,9 +218,6 @@ def resolve_comments(comments_csv: str) -> Dict[str, Any]:
     with open("output/patterns/patterns.json", "w") as f:
         json.dump(pattern_analysis, f, indent=2)
     
-    # Upload resolved data
-    upload_file("output/resolved/resolved.csv", "output/")
-    
     logger.info(f"Resolution complete: {len(resolved_cases)} resolved, {len(unresolved_cases)} unresolved")
     
     return {

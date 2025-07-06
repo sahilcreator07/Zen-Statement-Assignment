@@ -8,7 +8,7 @@ from langchain_groq import ChatGroq
 from typing import List
 import os
 from loguru import logger
-from src.tools import preprocess_transactions, upload_file, resolve_comments
+from src.tools import preprocess_transactions, resolve_comments
 import re
 
 
@@ -33,19 +33,13 @@ def preprocess_wrapper(*args, **kwargs):
         output_csv = kw.get('output_csv', 'output/discrepancies/discrepancies.csv')
         if not input_csv:
             raise ValueError('input_csv not found in agent input string')
-        return preprocess_transactions(input_csv, output_csv)
+        return (input_csv, output_csv)
     # Handle normal positional/keyword args
     input_csv = args[0] if args else kwargs.get('input_csv')
     output_csv = args[1] if len(args) > 1 else kwargs.get('output_csv', 'output/discrepancies/discrepancies.csv')
     return preprocess_transactions(input_csv, output_csv)
 
-def upload_wrapper(*args, **kwargs):
-    if args and isinstance(args[0], str) and 'file_path' in args[0]:
-        kw = parse_kwargs_from_string(args[0])
-        return upload_file(kw['file_path'], kw.get('target_dir', 'output/discrepancies/'))
-    file_path = args[0] if args else kwargs.get('file_path')
-    target_dir = args[1] if len(args) > 1 else kwargs.get('target_dir', 'output/discrepancies/')
-    return upload_file(file_path, target_dir)
+
 
 def resolve_wrapper(*args, **kwargs):
     print(f"RESOLVE_WRAPPER CALLED with args={args}, kwargs={kwargs}")
@@ -99,11 +93,11 @@ def get_tools():
             func=preprocess_wrapper,
             description="Clean and filter transaction data from CSV. Input: input_csv, output_csv. Output: path to filtered CSV with discrepancies."
         ),
-        Tool(
-            name="upload_file",
-            func=upload_wrapper,
-            description="Upload a file to local output directory. Input: file_path, target_dir. Output: destination file path."
-        ),
+        # remove upload_file cuz it was redundant. 
+        # Tool(
+        #     name="upload_file",
+        #     description="Use LLM to analyze comments and determine resolution status, generate summaries, next steps, and identify patterns. Input: comments_csv. Output: dict with resolution results and file paths."
+        # )
         Tool(
             name="resolve_comments",
             func=resolve_wrapper,
@@ -147,9 +141,7 @@ def run_agent_workflow(agent, input_data_path: str, comments_data_path: str):
     
     1. Preprocess transaction data from {input_data_path} to find discrepancies (recon_status = 'Not Found')
     2. Save the discrepancy file to output/discrepancies/discrepancies.csv
-    3. Upload the discrepancy file to the output directory
-    4. Process comments from {comments_data_path} using LLM to determine resolution status
-    5. Upload the resolved data
+    3. Process comments from {comments_data_path} using LLM to determine resolution status
     
     Plan your steps dynamically and execute them. Log your reasoning at each step.
     """
@@ -159,4 +151,4 @@ def run_agent_workflow(agent, input_data_path: str, comments_data_path: str):
     logger.info("Agent workflow completed")
     return result
 
-# TODO: Add agent reasoning loop and logging
+
